@@ -1,19 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 .container {
     display: flex;
     height: 100vh;
 }
 .img-container {
-   width: 40%;
+   width: 46%;
    background-color: rebeccapurple; 
 }
 .form-container {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 3rem;
+}
+.title {
+    font-size: 2.5rem;
 }
 form, .input-container {
     display: grid;
@@ -21,12 +28,12 @@ form, .input-container {
 }
 .form-container .input-container {
     position:relative;
+    margin-bottom: 4.5rem;
 }
 .form-container .input-container input {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
-    margin-bottom: 30px;
     border: none;
     border-bottom: 1px solid black;
     outline: none;
@@ -37,15 +44,39 @@ form, .input-container {
     top: 0;
     left:0;
     padding: 10px 0;
-    font-size: 16px;
+    font-size: 1.2rem;
     pointer-events: none;
     transition: 0.5s;
 }
 .form-container .input-container input:focus ~ label,
 .form-container .input-container input:valid ~ label{
-    top: -18px;
+    top: -30px;
     left: 0;
     color: rebeccapurple;
     font-size: 1rem;
+}
+.form-container .input-container input:focus {
+    border: 2px solid rebeccapurple;
+    border-radius: 5px;
+}
 
+.form-container .input-container input:focus:invalid {
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+.btn-container button {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    padding: 0.5rem 1.6rem;
+    background-color: rebeccapurple;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: rebeccapurple;
 }
