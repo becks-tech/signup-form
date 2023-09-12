@@ -8,7 +8,7 @@ const errorMsg = document.querySelector('.errorPW')
 emailElement.addEventListener('input', () => {
     let inputValue = emailElement.value;
     console.log(inputValue)
-    if (/@\w*(.com|.ca|.org)/.test(inputValue) === false){          // regular expressions are cool
+    if (/@\w*(.com|.ca|.org)/.test(inputValue) === false){
         emailElement.style.border = '2px solid red';
         emailElement.style.borderRadius = '5px';
     } else {
@@ -30,7 +30,7 @@ const checkPasswords = () => {
         password2.style.border = '2px solid red';
         password1.style.borderRadius = '5px';
         password2.style.borderRadius = '5px';
-        errorMsg.textContent = "Passwords do not match"
+        errorMsg.textContent = "* Passwords do not match"
         errorMsg.style.visibility = 'visible'
         errorMsg.style.color = 'red'
     } else {

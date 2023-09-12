@@ -10,9 +10,26 @@
     height: 100vh;
 }
 .img-container {
-   width: 46%;
+   min-width: 40%;
    background-color: rebeccapurple; 
 }
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    background-color: darkgray;
+}
+.logo-container img {
+    height: 100%;
+    font-size: clamp(1.5rem, 5vw, 3rem)
+}
+h2 {
+    color: #fff;
+
+}
+
 .form-container {
     display: flex;
     flex-direction: column;
@@ -21,7 +38,10 @@
 }
 .title {
     font-size: 2.5rem;
+    margin-bottom: -8rem;
+    color: black;
 }
+
 form, .input-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -44,7 +64,7 @@ form, .input-container {
     top: 0;
     left:0;
     padding: 10px 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     pointer-events: none;
     transition: 0.5s;
 }
@@ -60,13 +80,32 @@ form, .input-container {
     border-radius: 5px;
 }
 
-.form-container .input-container input:focus:invalid {
+.form-container .input-container input:focus:invalid:required{
     border: 2px solid red;
     border-radius: 5px;
 }
 
+.form-container .input-container input:focus:valid {
+    border: 2px solid green;
+    border-radius: 5px;
+}
+.errorPW {
+    visibility: hidden;
+    position: absolute;
+    top: 42px;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-transform: none;
+    overflow: hidden;
+    margin-top: 4px;
+    font-size: 12px;
+}
+.btn-container {
+    margin-top: -11rem;
+}
+
 .btn-container button {
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
     font-size: 1.25rem;
     padding: 0.5rem 1.6rem;
     background-color: rebeccapurple;
@@ -79,4 +118,28 @@ form, .input-container {
 a {
     text-decoration: none;
     color: rebeccapurple;
+}
+
+@media (max-width: 680px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .img-container {
+        min-height: 100vh;
+    }
+    .img-container img{
+        width: 100%;
+    }
+   
+    .form-container {
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 400px) {
+    .title {
+        margin-bottom: -2rem;
+        color: black;
+    }
 }

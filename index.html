@@ -4,26 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous' defer></script>
+    <link rel="shortcut icon" href="./assets/icons8-sign-up-64 (1).png" type="image/x-icon">
+    <script src="app.js" defer></script>
     <title>Sign-up form</title>
 </head>
 <body>
     <div class="container">
         <div class="img-container">
             <div class="logo-container">
-                <img src="#" alt="logo" srcset="">
-                <h4>Sign up today</h4>
+                <img src="./assets/odin-lined.png" alt="logo">
+                <h2>Sign up today</h2>
             </div>
+          
+           
         </div>
-        <div class="form-container">
+        <div class="form-container" id="form">
             <h2 class="title">Get Started</h2>
             <form action="">
                 <div class="input-container">
-                    <input type="text" id="first-name" name="first-name" required>
+                    <input type="text" id="first-name" name="first-name" minlength="2" required>
                     <label for="first-name">First Name</label>
                     <div class="error"></div>
                 </div>
                 <div class="input-container">
-                    <input type="text" id="last-name" name="last-name" required>
+                    <input type="text" id="last-name" name="last-name" minlength="2" required>
                     <label for="last-name">Last Name</label>
                     <div class="error"></div>
                 </div>
@@ -33,26 +38,26 @@
                     <div class="error"></div>
                 </div>
                 <div class="input-container">
-                    <input type="tel" id="phone-number" name="phone-number" pattern="^\+[1-9]{1}[0-9]{3,14}$" maxlength="11" required>
+                    <input type="tel" id="phone-number" name="phone-number" minlength="11" maxlength="11" required>
                     <label for="phone-number">Phone Number</label>
                     <div class="error"></div>
                 </div>
                 <div class="input-container">
                     <input type="password" id="password" name="password" required>
                     <label for="password">Password</label>
-                    <div class="error"></div>
+                    <div class="errorPW"></div>
                 </div>
                 <div class="input-container">
                     <input type="password" id="confirm-password" name="confirm-password" required>
                     <label for="confirm-password">Confirm Password</label>
                     <div class="error"></div>
                 </div>
-                <div class="btn-container">
-                    <button>Create Account</button>
-                    <p>Already have an account? <span><a href="#">Log in</a></span></p>
-                </div>
+                
             </form>
-            
+            <div class="btn-container">
+                <button>Create Account</button>
+                <p>Already have an account? <span><a href="#">Log in</a></span></p>
+            </div>
         </div>
     </div>
 </body>
