@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    height: 100vh;
+}
+.img-container {
+   width: 40%;
+   background-color: rebeccapurple; 
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+form, .input-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.form-container .input-container {
+    position:relative;
+}
+.form-container .input-container input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    background: transparent;
+}
+.form-container .input-container label {
+    position: absolute;
+    top: 0;
+    left:0;
+    padding: 10px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.form-container .input-container input:focus ~ label,
+.form-container .input-container input:valid ~ label{
+    top: -18px;
+    left: 0;
+    color: rebeccapurple;
+    font-size: 1rem;
+
+}
