@@ -19,16 +19,19 @@
     justify-content: center;
     width: 100%;
     height: 20%;
-    background-color: darkgray;
+    background-color: black;
+    opacity: 0.5;
+    position: relative;
+    top: 12rem;
 }
 .logo-container img {
-    height: 100%;
-    
+    height: 60% ;
+    padding-right: 1rem;
 }
-h2 {
+.logo-container h2 {
     color: #fff;
-    font-size: clamp(1.5rem, 5vw, 3rem)
-
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    text-transform: capitalize;
 }
 
 .form-container {
@@ -46,19 +49,22 @@ h2 {
 form, .input-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    
 }
 .form-container .input-container {
     position:relative;
     margin-bottom: 4.5rem;
+    
 }
 .form-container .input-container input {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
     outline: none;
     background: transparent;
+    
 }
 .form-container .input-container label {
     position: absolute;
@@ -81,8 +87,8 @@ form, .input-container {
     border-radius: 5px;
 }
 
-.form-container .input-container input:focus:invalid:required{
-    border: 2px solid red;
+.form-container .input-container input:focus:required{
+    border: 2px solid rgb(85, 139, 255);
     border-radius: 5px;
 }
 
@@ -90,7 +96,7 @@ form, .input-container {
     border: 2px solid green;
     border-radius: 5px;
 }
-.errorPW {
+.errorPW, .error {
     visibility: hidden;
     position: absolute;
     top: 42px;
@@ -114,6 +120,15 @@ form, .input-container {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+.btn-container button:hover {
+    background-color: rgb(80, 36, 124);
+}
+
+.btn-container button:focus {
+    background-color: rgb(80, 36, 124);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    
 }
 
 a {
