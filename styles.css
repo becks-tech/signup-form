@@ -4,6 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 .container {
     display: flex;
@@ -11,7 +12,9 @@
 }
 .img-container {
    min-width: 40%;
-   background-color: rebeccapurple; 
+   background:url(./assets/alexander-grey-SavQfLRm4Do-unsplash.jpg);
+   background-repeat: no-repeat;
+   background-size: 120%;
 }
 .logo-container{
     display: flex;
@@ -22,7 +25,7 @@
     background-color: black;
     opacity: 0.5;
     position: relative;
-    top: 12rem;
+    top: 10rem;
 }
 .logo-container img {
     height: 60% ;
@@ -96,6 +99,11 @@ form, .input-container {
     border: 2px solid green;
     border-radius: 5px;
 }
+
+.form {
+    border-bottom: 2px dashed rebeccapurple;
+}
+
 .errorPW, .error {
     visibility: hidden;
     position: absolute;
@@ -131,9 +139,23 @@ form, .input-container {
     
 }
 
+.down-arrow {
+    visibility:hidden ;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 25rem;
+    font-size: 5rem;
+    cursor: pointer;
+}
+
+a:hover{
+    color: rebeccapurple;
+}
+
 a {
     text-decoration: none;
-    color: rebeccapurple;
+    color: #fff;
 }
 
 @media (max-width: 680px) {
@@ -145,17 +167,23 @@ a {
         min-height: 100vh;
     }
     .img-container img{
-        width: 100%;
+        height: 90%;
     }
    
     .form-container {
         min-height: 100vh;
     }
-}
-
-@media (max-width: 400px) {
     .title {
-        margin-bottom: -2rem;
-        color: black;
+        margin-bottom: -3rem;
+    }
+    .btn-container {
+        margin-top: -7rem;
+    }
+    .form-container label{
+        font-size: 0.5rem;
+    }
+    .down-arrow {
+        visibility: visible;
     }
 }
+
